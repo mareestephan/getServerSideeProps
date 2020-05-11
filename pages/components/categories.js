@@ -1,11 +1,8 @@
 import Link from 'next/link';
 
-
 class Categories extends React.Component {
 
-
     render() {
-        // const data = (this.props.categories);
         const listItems = this.props.categories.map((category) =>
 
             <div key={category.category_id} >
@@ -20,19 +17,14 @@ class Categories extends React.Component {
                     </li>
                 </ul>
             </div >
-
         );
 
         return (
-
             <div>
                 {listItems}
             </div>
-
         );
-
     }
-
 }
 
 export default Categories;

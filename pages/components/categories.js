@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+
 class Categories extends React.Component {
 
     render() {

@@ -29,7 +29,7 @@ class Header extends React.Component {
                                 >
                                     <img
                                         className="pr-sm-4 mb-sm-2 goHome"
-                                        alt
+
                                         src="/static/images/new-logo.svg"
                                         style={{
                                             cursor: "pointer"
@@ -41,14 +41,14 @@ class Header extends React.Component {
                             </div>
                             <div className="header-mobile-menu-toggle d-flex d-sm-none">
                                 <a
-                                    className
+
                                     href="#nav"
                                     data-toggle="collapse"
                                     role="button"
                                     aria-expanded="false"
                                     aria-controls="nav"
                                 >
-                                    <img src="/static/images/bars.svg" alt aria-label="menu image" />
+                                    <img src="/static/images/bars.svg" aria-label="menu image" />
                                 </a>
                             </div>
                             <div className="header-local-tag mr-0 mr-sm-2"></div>
@@ -231,7 +231,7 @@ class Header extends React.Component {
                                         className="form-control mr-0 mr-sm-3"
                                         aria-label="Text input with dropdown button"
                                         id="Search"
-                                        placeholder
+
                                     />
                                     <a href="#" className="search-btn-icon" id="SearchButton">
                                         <img
@@ -249,7 +249,7 @@ class Header extends React.Component {
                                     <img
                                         className="mr-2 d-none d-sm-inline-block"
                                         src="/static/images/_icons/cart.svg"
-                                        alt
+
                                     />
                                     <img
                                         className="mr-2 d-flex d-sm-none"

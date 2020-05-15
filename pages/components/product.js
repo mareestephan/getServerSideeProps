@@ -112,7 +112,7 @@ class Product extends React.Component {
                                             <span className="close-icon">
                                                 <img
                                                     className="icon m-auto"
-                                                    src="/assets/_icons/times.svg"
+                                                    src="/assets/icons/times.svg"
                                                     alt
                                                 />
                                             </span>{" "}

@@ -6,8 +6,8 @@ class Categories extends React.Component {
 
         const listItems = this.props.categories.pages_to_create.map((category) =>
 
-            <div className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2">
-                <Link href='/components/clp/[category] ' as={'/components' + category.slug} key={category.category_id}>
+            <div className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2" key={category.category_id}>
+                <Link href='/components/clp/[category] ' as={'/components' + category.slug} >
 
                     <a
                         href="/p/swatch-ge275-female-watch/aku-ge275-st"
@@ -70,7 +70,7 @@ class Categories extends React.Component {
                         </small>
                         <small className="font-weight-bold">
                             {" "}
-                            > <span className>MEN'S JEWELLERY</span>
+                            > <span >MEN'S JEWELLERY</span>
                         </small>
                     </span>
                 </div>
@@ -110,8 +110,8 @@ class Categories extends React.Component {
                                             <span className="close-icon">
                                                 <img
                                                     className="icon m-auto"
-                                                    src="/assets/_icons/times.svg"
-                                                    alt
+                                                    src="/static/images/_icons/times.svg"
+
                                                 />
                                             </span>{" "}
                                             <h6 className="bold d-inline-block">
@@ -202,7 +202,7 @@ class Categories extends React.Component {
                                     <div className="font-weight-bold bg-light-teal">BRAND</div>
                                 </a>
                                 <div className="collapse checkboxes filterList" id="brand">
-                                    <div id="showMoreDiv0" className data-page={0} style={{}}>
+                                    <div id="showMoreDiv0" data-page={0} style={{}}>
                                         <label className="container">
                                             <input
                                                 type="checkbox"

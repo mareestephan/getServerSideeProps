@@ -10,7 +10,6 @@ const Index = (props) => (
 
       <Categories categories={props.data} />
 
-
     </div>
   </Layout>
 );

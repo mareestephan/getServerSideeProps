@@ -1,6 +1,4 @@
 import { Component } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import Product from '../product'
 import Layout from '../layout'

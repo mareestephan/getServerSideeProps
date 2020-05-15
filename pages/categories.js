@@ -9,38 +9,16 @@ class Categories extends React.Component {
             <div className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2" key={category.category_id}>
                 <Link href='/components/clp/[category] ' as={'/components' + category.slug} >
 
-                    <a
-                        href="/p/swatch-ge275-female-watch/aku-ge275-st"
-                        aria-label="product link"
-                    >
+                    <a aria-label="product link" >
+
                         <div className="card product mb-0 mb-sm-2 ">
-                            <div className="pb-2 px-2 mx-auto">
-                                <img
-                                    src={"https://www.allsale.co.za/cdn-cgi/image/width=180,height=180/prodimage/AKU-GE275-ST/1.jpg"}
-                                    className="card-img-top"
-                                    aria-label="image for product"
-                                />
-                            </div>
+
                             <div className="col-12 text-center text-sm-left product-text">
 
                                 <p className="mb-0">{category.brand}</p>
 
-                                <h6 className="mb-0">{category.product_name}</h6>
-                                <div className="row mb-3 mt-2">
-                                    <div className="col-12 col-sm-7 price  guide">
+                                <h6 className="mb-0">{category.meta_title}</h6>
 
-                                        <h3 className="mx-auto mx-sm-0 mb-0">{category.price}</h3>
-
-                                    </div>
-                                    <div className="col-12 col-sm-5 text-center pl-sm-0 text-sm-right guide">
-                                        <div className="discounted guide">
-
-                                            <b>{category.sale_price}</b>
-
-                                        </div>
-                                        <div className="text-orange guide discount ">-9%</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </a>
@@ -58,6 +36,7 @@ class Categories extends React.Component {
             }
         }
         return (
+
             <div className="container guide">
                 <div
                     className="text-center text-dark mt-3 mb-3 font-weight-bold"
@@ -805,15 +784,11 @@ class Categories extends React.Component {
                             </div>
 
 
-                            {/* Insert mapped products */}
+                            {/* ===================== Insert mapped products  ====================== */}
 
                             <div id="products4" className="col-12">
 
-
                                 <div className="row products mb-4 mt-4 mt-sm-0 mx-sm-0 px-3 px-sm-0">
-
-
-
 
                                     {resultsRender}
 

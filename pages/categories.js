@@ -1,12 +1,54 @@
-import React from "react";
-// import Categories from './categories'
+import Link from 'next/link';
 
-
-class Container extends React.Component {
-
+class Categories extends React.Component {
 
     render() {
 
+        const listItems = this.props.categories.pages_to_create.map((category) =>
+
+            <div className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2">
+                <Link href='/components/clp/[category] ' as={'/components' + category.slug} key={category.category_id}>
+
+                    <a
+                        href="/p/swatch-ge275-female-watch/aku-ge275-st"
+                        aria-label="product link"
+                    >
+                        <div className="card product mb-0 mb-sm-2 ">
+                            <div className="pb-2 px-2 mx-auto">
+                                <img
+                                    src={"https://www.allsale.co.za/cdn-cgi/image/width=180,height=180/prodimage/AKU-GE275-ST/1.jpg"}
+                                    className="card-img-top"
+                                    aria-label="image for product"
+                                />
+                            </div>
+                            <div className="col-12 text-center text-sm-left product-text">
+
+                                <p className="mb-0">{category.brand}</p>
+
+                                <h6 className="mb-0">{category.product_name}</h6>
+                                <div className="row mb-3 mt-2">
+                                    <div className="col-12 col-sm-7 price  guide">
+
+                                        <h3 className="mx-auto mx-sm-0 mb-0">{category.price}</h3>
+
+                                    </div>
+                                    <div className="col-12 col-sm-5 text-center pl-sm-0 text-sm-right guide">
+                                        <div className="discounted guide">
+
+                                            <b>{category.sale_price}</b>
+
+                                        </div>
+                                        <div className="text-orange guide discount ">-9%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </Link >
+            </div>
+
+        );
         return (
             <div className="container guide">
                 <div
@@ -755,13 +797,19 @@ class Container extends React.Component {
                             </div>
 
 
-                            {/* <Products slug={this.props.match.params.slug}></Products> */}
-                            {/* <Categories /> */}
+                            {/* Insert mapped products */}
+
+
+                            {listItems}
+
+
+
 
 
                         </div>
                     </div>
                 </div>
+
                 <div id="rowPaging" className="row">
                     <div className="col-10 col-sm-12 pr-0 text-right">
                         <nav id="catPaging" aria-label="...">
@@ -820,7 +868,17 @@ class Container extends React.Component {
                 </div>
             </div>
         );
+
+        // return (
+
+        //     <div>
+        //         {listItems}
+        //     </div>
+
+        // );
+
     }
+
 }
 
-export default Container;
+export default Categories;

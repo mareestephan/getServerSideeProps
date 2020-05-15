@@ -3,23 +3,23 @@ import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import Product from '../product'
+import Layout from '../layout'
 
 
 export async function getServerSideProps({ params }) {
 
-
-
     const res = await fetch(
-        `https://my-json-server.typicode.com/mareestephan/jsonProducts/pages_to_create `
+        // `https://my-json-server.typicode.com/mareestephan/jsonProducts/pages_to_create `
+        `http://www.json-generator.com/api/json/get/ckeElWByRe?indent=2`
     )
 
     const posts = await res.json();
-    const devReact = posts.filter(obj => obj.slug == "/clp/" + params.category)
+    const displayProducts = posts.pages_to_create.filter(obj => obj.slug == "/clp/" + params.category)
 
     return (
         {
             props:
-                { devReact }
+                { displayProducts }
         }
     )
 }
@@ -29,9 +29,9 @@ export default class extends Component {
     render() {
         return (
             <div >
-
-                <Product products={this.props.devReact} />
-
+                <Layout>
+                    <Product products={this.props.displayProducts} />
+                </Layout>
             </div>
         );
     }

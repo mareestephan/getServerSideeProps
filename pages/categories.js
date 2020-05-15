@@ -48,7 +48,15 @@ class Categories extends React.Component {
                 </Link >
             </div>
 
-        );
+        )
+
+        var resultsRender = [];
+        for (var i = 0; i < listItems.length; i++) {
+            resultsRender.push(listItems[i]);
+            if (i % 4 === 3) {
+                resultsRender.push(<div class="w-100 my-1 d-sm-block d-none"></div>);
+            }
+        }
         return (
             <div className="container guide">
                 <div
@@ -799,10 +807,18 @@ class Categories extends React.Component {
 
                             {/* Insert mapped products */}
 
+                            <div id="products4" className="col-12">
 
-                            {listItems}
+
+                                <div className="row products mb-4 mt-4 mt-sm-0 mx-sm-0 px-3 px-sm-0">
 
 
+
+
+                                    {resultsRender}
+
+                                </div>
+                            </div>
 
 
 

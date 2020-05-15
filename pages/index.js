@@ -7,7 +7,9 @@ const Index = (props) => (
 
   <Layout>
     <div>
+
       <Categories categories={props.data} />
+
 
     </div>
   </Layout>

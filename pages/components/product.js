@@ -4,16 +4,36 @@ import { withRouter } from 'next/router'
 
 class Product extends React.Component {
 
+    //     render() {
+    //         var items = $.map(this.state.searchResults, function (item) {
+    //             return <Item Name={item.Name} Attributes={item.Attributes} />;
+    //         }
+
+    //   var resultsRender = [];
+    //         for (var i = 0; i < items.length; i++) {
+    //             resultsRender.push(items[i]);
+    //             if (i % 3 === 2) {
+    //                 resultsRender.push(<div className="clearfix" />);
+    //             }
+    //         }
+
+    //         return (
+    //             <div>{resultsRender}</div>
+    //         );
+    //     }
+
 
     render() {
 
+
+
         const listItems = this.props.products[0].matched_products.map((product) =>
 
-            <div className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2">
 
+            <div key={product.product_id} className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2">
                 < Link href={product.product_link} >
 
-                    <a aria-label="product link">
+                    <a aria-label="product link" >
                         <div className="card product mb-0 mb-sm-2 ">
                             <div className="pb-2 px-2 mx-auto">
                                 <img
@@ -50,7 +70,17 @@ class Product extends React.Component {
             </div>
 
 
-        );
+
+        )
+        var resultsRender = [];
+        for (var i = 0; i < listItems.length; i++) {
+            resultsRender.push(listItems[i]);
+            if (i % 4 === 3) {
+                resultsRender.push(<div class="w-100 my-1 d-sm-block d-none"></div>);
+            }
+        }
+
+
         return (
             <div className="container guide">
                 <div
@@ -799,12 +829,18 @@ class Product extends React.Component {
                             </div>
 
 
-                            {/* <div id="products4" class="col-12">
-                                <div class="row products mb-4 mt-4 mt-sm-0 mx-sm-0 px-3 px-sm-0">
-                                    <div className="col-6 col-md one-quarter guide mt-0 pl-0 pl-sm-2 pr-1 pr-sm-2"> */}
+                            <div id="products4" className="col-12">
 
 
-                            {listItems}
+                                <div className="row products mb-4 mt-4 mt-sm-0 mx-sm-0 px-3 px-sm-0">
+
+
+
+
+                                    {resultsRender}
+
+                                </div>
+                            </div>
 
                             {/* </div>
                                 </div>
@@ -875,15 +911,14 @@ class Product extends React.Component {
                         </nav>
                     </div>
                 </div>
-            </div>
+            </div >
         );
 
-        // return (
-        //     <div>
-        //         {listItems}
-        //     </div>
-        // );
+
     }
 }
 
 export default Product;
+
+
+

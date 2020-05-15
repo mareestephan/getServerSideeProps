@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './header'
 import Navbar from './navbar'
+import React from 'react'
 
 
 

@@ -3,16 +3,32 @@ import Categories from './categories'
 import Fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 
-const Index = (props) => (
+// const Index = (props) => (
 
-  <Layout>
-    <div>
+//   <Layout>
+//     <div>
 
-      <Categories categories={props.data} />
+//       <Categories categories={props.data} />
 
-    </div>
-  </Layout>
-);
+//     </div>
+//   </Layout>
+// );
+
+export default function Index(props) {
+  return (
+    <>
+
+      <Layout>
+        <div>
+
+          <Categories categories={props.data} />
+
+        </div>
+      </Layout>
+
+    </>
+  )
+}
 
 export async function getServerSideProps() {
 
@@ -29,4 +45,4 @@ export async function getServerSideProps() {
 
 }
 
-export default Index
+// export default Index
